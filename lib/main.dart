@@ -317,6 +317,28 @@ class L {
     'Dil / Language / زبان',
   );
 
+  // Silme
+  String get delTitle => _t(
+    'Bu kapsülü silmek istediğine emin misin?',
+    'Delete this capsule?',
+    'این کپسول حذف شود؟',
+  );
+  String get delDesc => _t(
+    'Bu işlem geri alınamaz.',
+    'This action cannot be undone.',
+    'این عمل قابل بازگشت نیست.',
+  );
+  String get delBtn => _t('Sil', 'Delete', 'حذف');
+  String get delCancel => _t('İptal', 'Cancel', 'انصراف');
+  String get delCapsule => _t('Kapsülü Sil', 'Delete Capsule', 'حذف کپسول');
+
+  // Parazit
+  String get parazitSignal => _t(
+    'Sinyal zayıf — tam ses için açılış tarihini bekle.',
+    'Weak signal — wait for the unlock date for full audio.',
+    'سیگنال ضعیف — برای صدای کامل منتظر تاریخ باز شدن باش.',
+  );
+
   // Önayar tarihler
   String get p1m => _t('1 Ay', '1 Month', '۱ ماه');
   String get p3m => _t('3 Ay', '3 Months', '۳ ماه');
@@ -788,25 +810,6 @@ class T {
 
 String sureFmt(int s) =>
     '${(s ~/ 60).toString().padLeft(2, '0')}:${(s % 60).toString().padLeft(2, '0')}';
-
-String tarihFmt(DateTime d) {
-  const ay = [
-    '',
-    'Oca',
-    'Şub',
-    'Mar',
-    'Nis',
-    'May',
-    'Haz',
-    'Tem',
-    'Ağu',
-    'Eyl',
-    'Eki',
-    'Kas',
-    'Ara',
-  ];
-  return '${d.day} ${ay[d.month]} ${d.year}';
-}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // APP
@@ -1729,6 +1732,7 @@ class _IlkKapsulEkranState extends State<IlkKapsulEkran> {
       _dinlendi = false;
     });
     _kayitTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted) return;
       setState(() => _sure++);
       if (_sure >= 120) _kaydiDurdur();
     });
@@ -1736,6 +1740,7 @@ class _IlkKapsulEkranState extends State<IlkKapsulEkran> {
 
   void _kaydiDurdur() {
     _kayitTimer?.cancel();
+    if (!mounted) return;
     setState(() {
       _kayitYapiyorMu = false;
       _tamamlandi = true;
@@ -2303,7 +2308,7 @@ class AnaEkran extends StatelessWidget {
             const SizedBox(height: 16),
             // Versiyon bilgisi
             Text(
-              'Zaman Kapsülü v0.1.0 — DartPad Prototype',
+              '${l.appName} v0.1.0 — DartPad Prototype',
               style: TextStyle(
                 color: T.metin3.withValues(alpha: 0.6),
                 fontSize: 10,
@@ -3031,14 +3036,14 @@ class _ParazitDialogState extends State<_ParazitDialog>
                       color: Colors.red.withValues(alpha: 0.25),
                     ),
                   ),
-                  child: const Row(
+                  child: Row(
                     children: [
-                      Text('📡', style: TextStyle(fontSize: 13)),
-                      SizedBox(width: 8),
+                      const Text('📡', style: TextStyle(fontSize: 13)),
+                      const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'Sinyal zayıf — tam ses için açılış tarihini bekle.',
-                          style: TextStyle(
+                          l.parazitSignal,
+                          style: const TextStyle(
                             color: Colors.redAccent,
                             fontSize: 11,
                             height: 1.4,
@@ -3505,6 +3510,7 @@ class _KapsulOlusturEkranState extends State<KapsulOlusturEkran> {
       _enAzBirKezDinlendi = false;
     });
     _kayitTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted) return;
       setState(() => _sure++);
       if (_sure >= 120) _kaydiDurdur();
     });
@@ -3512,6 +3518,7 @@ class _KapsulOlusturEkranState extends State<KapsulOlusturEkran> {
 
   void _kaydiDurdur() {
     _kayitTimer?.cancel();
+    if (!mounted) return;
     setState(() {
       _kayitYapiyorMu = false;
       _tamamlandi = true;
@@ -4286,8 +4293,6 @@ class _KapsulDetayEkranState extends State<KapsulDetayEkran>
   bool _acildi = false;
   bool _oynatiliyor = false;
 
-  AppDil get _dil => dilNotifier.value;
-
   @override
   void initState() {
     super.initState();
@@ -4334,27 +4339,6 @@ class _KapsulDetayEkranState extends State<KapsulDetayEkran>
 
   void _silOnay(BuildContext ctx) {
     HapticFeedback.mediumImpact();
-    final silLabel = _dil == AppDil.en
-        ? 'Delete'
-        : _dil == AppDil.fa
-        ? 'حذف'
-        : 'Sil';
-    final iptalLabel = _dil == AppDil.en
-        ? 'Cancel'
-        : _dil == AppDil.fa
-        ? 'انصراف'
-        : 'İptal';
-    final baslik = _dil == AppDil.en
-        ? 'Delete this capsule?'
-        : _dil == AppDil.fa
-        ? 'این کپسول حذف شود؟'
-        : 'Bu kapsülü silmek istediğine emin misin?';
-    final aciklama = _dil == AppDil.en
-        ? 'This action cannot be undone.'
-        : _dil == AppDil.fa
-        ? 'این عمل قابل بازگشت نیست.'
-        : 'Bu işlem geri alınamaz.';
-
     showDialog(
       context: ctx,
       builder: (_) => AlertDialog(
@@ -4365,7 +4349,7 @@ class _KapsulDetayEkranState extends State<KapsulDetayEkran>
             const Text('⚠️ ', style: TextStyle(fontSize: 20)),
             Expanded(
               child: Text(
-                baslik,
+                l.delTitle,
                 style: const TextStyle(
                   color: T.metin,
                   fontSize: 16,
@@ -4376,13 +4360,13 @@ class _KapsulDetayEkranState extends State<KapsulDetayEkran>
           ],
         ),
         content: Text(
-          aciklama,
+          l.delDesc,
           style: const TextStyle(color: T.metin2, fontSize: 13),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: Text(iptalLabel, style: const TextStyle(color: T.metin2)),
+            child: Text(l.delCancel, style: const TextStyle(color: T.metin2)),
           ),
           ElevatedButton(
             onPressed: () {
@@ -4394,7 +4378,7 @@ class _KapsulDetayEkranState extends State<KapsulDetayEkran>
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
             child: Text(
-              silLabel,
+              l.delBtn,
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
@@ -4613,11 +4597,7 @@ class _KapsulDetayEkranState extends State<KapsulDetayEkran>
                       color: Colors.red.withValues(alpha: 0.7),
                     ),
                     label: Text(
-                      _dil == AppDil.en
-                          ? 'Delete Capsule'
-                          : _dil == AppDil.fa
-                          ? 'حذف کپسول'
-                          : 'Kapsülü Sil',
+                      l.delCapsule,
                       style: TextStyle(
                         color: Colors.red.withValues(alpha: 0.7),
                         fontWeight: FontWeight.w600,
