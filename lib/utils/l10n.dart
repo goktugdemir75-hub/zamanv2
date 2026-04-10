@@ -1,5 +1,3 @@
-import 'dart:math';
-
 enum AppDil { tr, en, fa }
 
 class DilNotifier {
