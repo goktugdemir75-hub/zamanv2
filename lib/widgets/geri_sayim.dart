@@ -136,7 +136,6 @@ class _FlipBirim extends StatefulWidget {
 class _FlipBirimState extends State<_FlipBirim>
     with SingleTickerProviderStateMixin {
   late AnimationController _ctrl;
-  int _oncekiDeger = 0;
 
   @override
   void initState() {
@@ -152,7 +151,6 @@ class _FlipBirimState extends State<_FlipBirim>
   void didUpdateWidget(_FlipBirim old) {
     super.didUpdateWidget(old);
     if (old.deger != widget.deger) {
-      _oncekiDeger = old.deger;
       _ctrl.forward(from: 0);
     }
   }

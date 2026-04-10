@@ -160,6 +160,7 @@ class _KapsulOlusturEkranState extends State<KapsulOlusturEkran> {
         olusturmaTarihi: DateTime.now(),
         acilisTarihi: _acilis,
         aliciSifreli: aliciSifreli,
+        // ignore: deprecated_member_use
         renkDegeri: _renk.value,
         emoji: _emoji,
         paylasimKodu: Kapsul.kodUret(),

@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import '../models/kapsul.dart';
 import '../services/sifreleme_servisi.dart';
 import '../utils/theme.dart';
-import '../utils/l10n.dart';
 
 class KapsulKarti extends StatefulWidget {
   final Kapsul kapsul;

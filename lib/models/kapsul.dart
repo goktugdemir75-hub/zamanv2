@@ -34,6 +34,7 @@ class Kapsul {
     this.dinlendiMi = false,
   });
 
+  // ignore: deprecated_member_use
   Color get renk => Color(renkDegeri);
   bool get acilabilirMi => DateTime.now().isAfter(acilisTarihi);
   Duration get kalanSure => acilisTarihi.difference(DateTime.now());
