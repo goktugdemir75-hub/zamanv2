@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'services/app_state.dart';
 import 'utils/theme.dart';
 import 'screens/giris_ekrani.dart';
@@ -23,7 +24,9 @@ void main() async {
   ]);
 
   // Firebase başlat
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const ZamanKapsuluApp());
 }

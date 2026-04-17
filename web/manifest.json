@@ -1,11 +1,11 @@
 {
-    "name": "myapp",
-    "short_name": "myapp",
+    "name": "Zaman Kapsülü",
+    "short_name": "Zaman Kapsülü",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#030308",
+    "theme_color": "#E8364F",
+    "description": "Sesini geleceğe kilitle",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
