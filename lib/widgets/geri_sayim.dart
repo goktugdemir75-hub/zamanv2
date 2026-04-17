@@ -140,7 +140,6 @@ class _FlipBirimState extends State<_FlipBirim>
   @override
   void initState() {
     super.initState();
-    _oncekiDeger = widget.deger;
     _ctrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 300),
