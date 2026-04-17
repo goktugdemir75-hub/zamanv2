@@ -19,7 +19,7 @@ dependencies:
   google_sign_in: ^6.2.2
 
   # Ses kaydı & oynatma
-  record: ^5.2.1
+  record: ^6.0.0
   audioplayers: ^6.1.0
 
   # Şifreleme
