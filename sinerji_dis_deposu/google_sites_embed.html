@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinerji Diş Deposu | Antalya Dental Malzeme ve Ekipman</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lacivert:#0b2545;
+    --mavi:#1368aa;
+    --turkuaz:#13c4c4;
+    --acik:#eef6fb;
+    --yazi:#23324a;
+    --gri:#6b7a90;
+    --beyaz:#ffffff;
+    --wp:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',Arial,sans-serif;color:var(--yazi);background:var(--beyaz);line-height:1.6}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  .kap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* ÜST MENÜ */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);box-shadow:0 2px 14px rgba(11,37,69,.08)}
+  .menu{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--lacivert)}
+  .logo-ikon{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--mavi),var(--turkuaz));display:grid;place-items:center;color:#fff;font-size:20px}
+  .logo span{color:var(--mavi)}
+  nav a{margin-left:26px;font-weight:500;font-size:15px;color:var(--yazi)}
+  nav a:hover{color:var(--mavi)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-weight:600;font-size:15px;transition:.25s;cursor:pointer;border:none}
+  .btn-ana{background:linear-gradient(135deg,var(--mavi),var(--turkuaz));color:#fff;box-shadow:0 8px 22px rgba(19,104,170,.35)}
+  .btn-ana:hover{transform:translateY(-2px)}
+  .btn-wp{background:var(--wp);color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.35)}
+  .btn-wp:hover{transform:translateY(-2px)}
+  .btn-cizgi{border:2px solid #fff;color:#fff}
+  .btn-cizgi:hover{background:#fff;color:var(--lacivert)}
+
+  /* HERO */
+  .hero{position:relative;min-height:620px;display:flex;align-items:center;color:#fff;
+    background:linear-gradient(100deg,rgba(11,37,69,.93) 0%,rgba(11,37,69,.75) 50%,rgba(19,104,170,.35) 100%),
+    url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
+  .hero-ic{max-width:640px;padding:80px 0}
+  .rozet{display:inline-block;background:rgba(19,196,196,.2);border:1px solid var(--turkuaz);color:#9ff5f5;padding:6px 16px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:20px}
+  .hero h1{font-size:50px;line-height:1.15;font-weight:800;margin-bottom:20px}
+  .hero h1 em{font-style:normal;color:var(--turkuaz)}
+  .hero p{font-size:18px;opacity:.9;margin-bottom:34px}
+  .hero-btn{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* AVANTAJ ŞERİDİ */
+  .serit{margin-top:-60px;position:relative;z-index:5}
+  .serit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .serit-kart{background:#fff;border-radius:18px;padding:26px 22px;box-shadow:0 14px 40px rgba(11,37,69,.12);text-align:center}
+  .serit-kart .ik{font-size:34px;margin-bottom:10px}
+  .serit-kart h4{color:var(--lacivert);font-size:16px;margin-bottom:4px}
+  .serit-kart p{font-size:13px;color:var(--gri)}
+
+  /* BÖLÜM */
+  section{padding:90px 0}
+  .baslik{text-align:center;max-width:680px;margin:0 auto 50px}
+  .baslik small{color:var(--mavi);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+  .baslik h2{font-size:36px;color:var(--lacivert);font-weight:800;margin:8px 0 12px;line-height:1.25}
+  .baslik p{color:var(--gri)}
+
+  /* ÜRÜNLER */
+  .urunler{background:var(--acik)}
+  .urun-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .urun{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(11,37,69,.08);transition:.3s}
+  .urun:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,37,69,.16)}
+  .urun-resim{height:210px;overflow:hidden}
+  .urun-resim img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .urun:hover .urun-resim img{transform:scale(1.07)}
+  .urun-ic{padding:22px 24px 26px}
+  .urun-ic h3{color:var(--lacivert);font-size:19px;margin-bottom:8px}
+  .urun-ic p{color:var(--gri);font-size:14px;margin-bottom:14px}
+  .etiketler{display:flex;flex-wrap:wrap;gap:6px}
+  .etiketler span{background:var(--acik);color:var(--mavi);font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px}
+
+  /* HAKKIMIZDA */
+  .hakkinda-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .foto-kolaj{position:relative}
+  .foto-kolaj .b{border-radius:24px;height:430px;width:100%;object-fit:cover;box-shadow:0 20px 50px rgba(11,37,69,.18)}
+  .foto-kolaj .k{position:absolute;right:-24px;bottom:-30px;width:210px;height:170px;object-fit:cover;border-radius:18px;border:6px solid #fff;box-shadow:0 14px 34px rgba(11,37,69,.2)}
+  .tecrube{position:absolute;left:-18px;top:30px;background:linear-gradient(135deg,var(--mavi),var(--turkuaz));color:#fff;padding:18px 22px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(19,104,170,.35)}
+  .tecrube b{display:block;font-size:30px;line-height:1}
+  .tecrube span{font-size:12px}
+  .hakkinda-yazi small{color:var(--mavi);font-weight:700;letter-spacing:2px;font-size:13px}
+  .hakkinda-yazi h2{font-size:34px;color:var(--lacivert);font-weight:800;margin:8px 0 18px;line-height:1.25}
+  .hakkinda-yazi p{color:var(--gri);margin-bottom:22px}
+  .liste{list-style:none;margin-bottom:30px}
+  .liste li{padding:8px 0 8px 34px;position:relative;font-weight:500}
+  .liste li:before{content:"✓";position:absolute;left:0;top:8px;width:24px;height:24px;border-radius:50%;background:var(--acik);color:var(--mavi);font-weight:800;display:grid;place-items:center;font-size:13px}
+
+  /* SAYAÇLAR */
+  .sayac{background:linear-gradient(120deg,var(--lacivert),var(--mavi));color:#fff;padding:60px 0}
+  .sayac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .sayac b{font-size:42px;font-weight:800;display:block;color:#fff}
+  .sayac span{opacity:.85;font-size:14px}
+
+  /* GALERİ */
+  .galeri-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:16px}
+  .galeri-grid img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+  .galeri-grid .buyuk{grid-row:span 2}
+
+  /* CTA */
+  .cta{background:linear-gradient(rgba(11,37,69,.88),rgba(11,37,69,.88)),url('https://images.unsplash.com/photo-1642844744022-d76a9af3711a?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;text-align:center}
+  .cta h2{font-size:38px;font-weight:800;margin-bottom:14px}
+  .cta p{max-width:620px;margin:0 auto 32px;opacity:.9}
+  .cta .hero-btn{justify-content:center}
+
+  /* İLETİŞİM */
+  .iletisim-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+  .bilgi-kart{background:var(--acik);border-radius:20px;padding:34px}
+  .bilgi{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+  .bilgi .ik{min-width:48px;height:48px;border-radius:14px;background:#fff;display:grid;place-items:center;font-size:22px;box-shadow:0 6px 16px rgba(11,37,69,.08)}
+  .bilgi h4{color:var(--lacivert);font-size:16px}
+  .bilgi p,.bilgi a{color:var(--gri);font-size:14px}
+  .bilgi a:hover{color:var(--mavi)}
+  .harita{border-radius:20px;overflow:hidden;min-height:380px;box-shadow:0 10px 30px rgba(11,37,69,.1)}
+  .harita iframe{width:100%;height:100%;min-height:380px;border:0}
+
+  footer{background:var(--lacivert);color:#b9c6d8;text-align:center;padding:30px 20px;font-size:14px}
+  footer b{color:#fff}
+
+  /* SABİT WHATSAPP */
+  .wp-sabit{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:var(--wp);display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.5);z-index:99;animation:nabiz 2s infinite}
+  .wp-sabit svg{width:32px;height:32px;fill:#fff}
+  @keyframes nabiz{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  /* MOBİL */
+  @media(max-width:900px){
+    nav{display:none}
+    .hero h1{font-size:34px}
+    .hero{min-height:540px}
+    .serit-grid,.sayac-grid{grid-template-columns:repeat(2,1fr)}
+    .urun-grid{grid-template-columns:1fr 1fr}
+    .hakkinda-grid,.iletisim-grid{grid-template-columns:1fr}
+    .foto-kolaj .k{right:10px}
+    .tecrube{left:10px}
+    .galeri-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}
+    .galeri-grid .buyuk{grid-column:span 2;grid-row:span 1}
+    .baslik h2,.hakkinda-yazi h2,.cta h2{font-size:28px}
+  }
+  @media(max-width:560px){
+    .urun-grid{grid-template-columns:1fr}
+    .menu .btn{display:none}
+    .hero h1{font-size:29px}
+    section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ ÜST MENÜ ============ -->
+<header>
+  <div class="kap menu">
+    <a href="#anasayfa" class="logo"><div class="logo-ikon">🦷</div>Sinerji <span>Diş Deposu</span></a>
+    <nav>
+      <a href="#urunler">Ürünler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+    <!-- TELEFON: 905XXXXXXXXX kısmını kendi numaranızla değiştirin -->
+    <a href="https://wa.me/905XXXXXXXXX" target="_blank" class="btn btn-wp">WhatsApp</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="anasayfa">
+  <div class="kap">
+    <div class="hero-ic">
+      <div class="rozet">📍 ANTALYA'NIN DENTAL TEDARİK NOKTASI</div>
+      <h1>Kliniğiniz için <em>ihtiyacınız olan her şey</em> tek adreste</h1>
+      <p>Dental ekipmanlar, diş hekimliği sarf malzemeleri, el aletleri ve cihazlarda uygun fiyat, orijinal ürün ve Antalya içi hızlı teslimat.</p>
+      <div class="hero-btn">
+        <a href="https://wa.me/905XXXXXXXXX?text=Merhaba%2C%20%C3%BCr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn btn-wp">💬 WhatsApp'tan Fiyat Al</a>
+        <a href="tel:+905XXXXXXXXX" target="_top" class="btn btn-cizgi">📞 Hemen Ara</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AVANTAJLAR ============ -->
+<div class="serit">
+  <div class="kap serit-grid">
+    <div class="serit-kart"><div class="ik">🚚</div><h4>Hızlı Teslimat</h4><p>Antalya içi aynı gün teslim</p></div>
+    <div class="serit-kart"><div class="ik">✅</div><h4>Orijinal Ürün</h4><p>Faturalı ve garantili ürünler</p></div>
+    <div class="serit-kart"><div class="ik">💰</div><h4>Uygun Fiyat</h4><p>Kliniklere özel fiyatlandırma</p></div>
+    <div class="serit-kart"><div class="ik">🤝</div><h4>Teknik Destek</h4><p>Kurulum ve satış sonrası destek</p></div>
+  </div>
+</div>
+
+<!-- ============ ÜRÜNLER ============ -->
+<section class="urunler" id="urunler">
+  <div class="kap">
+    <div class="baslik">
+      <small>Ürün Gruplarımız</small>
+      <h2>Diş Hekimliğinin Tüm İhtiyaçları</h2>
+      <p>Muayenehaneden poliklinik ve hastanelere kadar geniş ürün yelpazesiyle hizmetinizdeyiz.</p>
+    </div>
+    <div class="urun-grid">
+      <div class="urun">
+        <div class="urun-resim"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Dental ünit"></div>
+        <div class="urun-ic"><h3>Dental Ünit & Cihazlar</h3><p>Dental ünitler, kompresör, otoklav, röntgen ve klinik cihazları.</p>
+          <div class="etiketler"><span>Ünit</span><span>Otoklav</span><span>Kompresör</span></div></div>
+      </div>
+      <div class="urun">
+        <div class="urun-resim"><img src="https://images.unsplash.com/photo-1642844744022-d76a9af3711a?auto=format&fit=crop&w=800&q=80" alt="El aletleri"></div>
+        <div class="urun-ic"><h3>El Aletleri & Frezler</h3><p>Aeratör, anguldurva, piyasemen, frezler ve cerrahi el aletleri.</p>
+          <div class="etiketler"><span>Aeratör</span><span>Frez</span><span>Cerrahi Set</span></div></div>
+      </div>
+      <div class="urun">
+        <div class="urun-resim"><img src="https://images.unsplash.com/photo-1643660527090-bea721ad71f8?auto=format&fit=crop&w=800&q=80" alt="Restoratif malzemeler"></div>
+        <div class="urun-ic"><h3>Restoratif Malzemeler</h3><p>Kompozit, bonding, siman, dolgu ve ölçü malzemeleri.</p>
+          <div class="etiketler"><span>Kompozit</span><span>Bonding</span><span>Ölçü</span></div></div>
+      </div>
+      <div class="urun">
+        <div class="urun-resim"><img src="https://images.unsplash.com/photo-1643660527217-b5e025ac642e?auto=format&fit=crop&w=800&q=80" alt="Endodonti"></div>
+        <div class="urun-ic"><h3>Endodonti & İmplant</h3><p>Kanal eğeleri, apeks locator, endomotor ve implant üstü parçalar.</p>
+          <div class="etiketler"><span>Eğe</span><span>Endomotor</span><span>İmplant</span></div></div>
+      </div>
+      <div class="urun">
+        <div class="urun-resim"><img src="https://images.unsplash.com/photo-1628235176517-71013205a2de?auto=format&fit=crop&w=800&q=80" alt="Sarf malzemeleri"></div>
+        <div class="urun-ic"><h3>Sarf & Hijyen Ürünleri</h3><p>Eldiven, maske, önlük, dezenfektan, sterilizasyon poşeti ve tek kullanımlıklar.</p>
+          <div class="etiketler"><span>Eldiven</span><span>Maske</span><span>Dezenfektan</span></div></div>
+      </div>
+      <div class="urun">
+        <div class="urun-resim"><img src="https://images.unsplash.com/photo-1704455306925-1401c3012117?auto=format&fit=crop&w=800&q=80" alt="Klinik kurulumu"></div>
+        <div class="urun-ic"><h3>Klinik Kurulum Paketleri</h3><p>Yeni açılacak muayenehaneler için anahtar teslim ekipman çözümleri.</p>
+          <div class="etiketler"><span>Yeni Klinik</span><span>Paket Fiyat</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HAKKIMIZDA ============ -->
+<section id="hakkimizda">
+  <div class="kap hakkinda-grid">
+    <div class="foto-kolaj">
+      <img class="b" src="https://images.unsplash.com/photo-1704455306251-b4634215d98f?auto=format&fit=crop&w=1000&q=80" alt="Modern diş kliniği">
+      <img class="k" src="https://images.unsplash.com/photo-1643660526741-094639fbe53a?auto=format&fit=crop&w=500&q=80" alt="Dental ünit">
+      <div class="tecrube"><b>%100</b><span>Müşteri<br>Memnuniyeti</span></div>
+    </div>
+    <div class="hakkinda-yazi">
+      <small>HAKKIMIZDA</small>
+      <h2>Diş hekimlerinin güvenilir çözüm ortağı</h2>
+      <p>Sinerji Diş Deposu olarak Antalya ve çevresindeki diş hekimlerine, kliniklere ve laboratuvarlara kaliteli dental ekipman ve malzemeleri uygun fiyatlarla sunuyoruz. Doğru ürünü doğru zamanda kliniğinize ulaştırmak için çalışıyoruz.</p>
+      <ul class="liste">
+        <li>Binlerce çeşit stoklu ürün</li>
+        <li>Kliniklere özel indirim ve vade seçenekleri</li>
+        <li>Siparişlerinizde hızlı ve güvenli teslimat</li>
+        <li>Cihazlarda kurulum, servis ve teknik destek</li>
+      </ul>
+      <a href="https://wa.me/905XXXXXXXXX" target="_blank" class="btn btn-ana">Teklif İsteyin →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAYAÇLAR ============ -->
+<div class="sayac">
+  <div class="kap sayac-grid">
+    <div><b>5000+</b><span>Ürün Çeşidi</span></div>
+    <div><b>500+</b><span>Mutlu Klinik</span></div>
+    <div><b>24 saat</b><span>İçinde Teslimat</span></div>
+    <div><b>7/24</b><span>WhatsApp Destek</span></div>
+  </div>
+</div>
+
+<!-- ============ GALERİ ============ -->
+<section id="galeri">
+  <div class="kap">
+    <div class="baslik">
+      <small>Galeri</small>
+      <h2>Kaliteli Ekipman, Modern Klinikler</h2>
+    </div>
+    <div class="galeri-grid">
+      <img class="buyuk" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Dental klinik">
+      <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Dental ünit">
+      <img src="https://images.unsplash.com/photo-1642844744022-d76a9af3711a?auto=format&fit=crop&w=600&q=80" alt="El aletleri">
+      <img src="https://images.unsplash.com/photo-1643660527090-bea721ad71f8?auto=format&fit=crop&w=600&q=80" alt="Dental aletler">
+      <img src="https://images.unsplash.com/photo-1704455306251-b4634215d98f?auto=format&fit=crop&w=600&q=80" alt="Klinik">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="kap">
+    <h2>Kliniğiniz için özel fiyat teklifi alın!</h2>
+    <p>İhtiyaç listenizi WhatsApp'tan gönderin, en uygun fiyat teklifini hemen size iletelim.</p>
+    <div class="hero-btn">
+      <a href="https://wa.me/905XXXXXXXXX?text=Merhaba%2C%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" class="btn btn-wp">💬 WhatsApp'tan Yazın</a>
+      <a href="tel:+905XXXXXXXXX" target="_top" class="btn btn-cizgi">📞 0 5XX XXX XX XX</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ İLETİŞİM ============ -->
+<section id="iletisim">
+  <div class="kap">
+    <div class="baslik">
+      <small>İletişim</small>
+      <h2>Bize Ulaşın</h2>
+      <p>Ürün, fiyat ve stok bilgisi için bizi arayın ya da mağazamızı ziyaret edin.</p>
+    </div>
+    <div class="iletisim-grid">
+      <div class="bilgi-kart">
+        <div class="bilgi"><div class="ik">📍</div><div><h4>Adres</h4><p>Muratpaşa / ANTALYA<br>(Açık adresinizi buraya yazın)</p></div></div>
+        <div class="bilgi"><div class="ik">📞</div><div><h4>Telefon</h4><a href="tel:+905XXXXXXXXX" target="_top">0 5XX XXX XX XX</a></div></div>
+        <div class="bilgi"><div class="ik">💬</div><div><h4>WhatsApp</h4><a href="https://wa.me/905XXXXXXXXX" target="_blank">Mesaj göndermek için tıklayın</a></div></div>
+        <div class="bilgi"><div class="ik">✉️</div><div><h4>E-posta</h4><a href="mailto:info@sinerjidisdeposu.com" target="_top">info@sinerjidisdeposu.com</a></div></div>
+        <div class="bilgi" style="margin-bottom:0"><div class="ik">🕘</div><div><h4>Çalışma Saatleri</h4><p>Pazartesi – Cumartesi: 09:00 – 19:00</p></div></div>
+      </div>
+      <div class="harita">
+        <iframe src="https://maps.google.com/maps?q=Sinerji%20Di%C5%9F%20Deposu%20Antalya&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 <b>Sinerji Diş Deposu</b> · Antalya Dental Ekipman ve Diş Hekimliği Malzemeleri
+</footer>
+
+<!-- SABİT WHATSAPP BUTONU -->
+<a href="https://wa.me/905XXXXXXXXX" target="_blank" class="wp-sabit" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.5L3 29l6.7-1.7c1.9 1 4.1 1.6 6.3 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1 1.1-3.9-.3-.4C5.8 20 5.3 18 5.3 16 5.3 10.1 10.1 5.3 16 5.3S26.7 10.1 26.7 16 21.9 26.7 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+</body>
+</html>
