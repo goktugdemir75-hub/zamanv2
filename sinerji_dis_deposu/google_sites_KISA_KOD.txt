@@ -1,0 +1,142 @@
+<div class="sj">
+
+<div class="ust">
+  <div class="kap ust-ic">
+    <div class="logo">🦷 Sinerji <span>Diş Deposu</span></div>
+    <a class="btn wp" href="https://wa.me/905369467686" target="_blank">WhatsApp</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="kap">
+    <div class="rozet">📍 ANTALYA DENTAL MALZEME VE EKİPMAN</div>
+    <h1>Kliniğiniz için <em>ihtiyacınız olan her şey</em> tek adreste</h1>
+    <p>Dental ekipmanlar, diş hekimliği sarf malzemeleri, el aletleri ve cihazlarda uygun fiyat, orijinal ürün ve hızlı teslimat.</p>
+    <a class="btn wp" href="https://wa.me/905369467686?text=Merhaba%2C%20%C3%BCr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">💬 WhatsApp'tan Fiyat Al</a>
+    <a class="btn cizgi" href="tel:+905369467686" target="_blank">📞 0 536 946 76 86</a>
+  </div>
+</div>
+
+<div class="kap avantaj">
+  <div class="kart"><b>🚚</b><h4>Hızlı Teslimat</h4><p>Antalya içi hızlı teslim</p></div>
+  <div class="kart"><b>✅</b><h4>Orijinal Ürün</h4><p>Faturalı ve garantili</p></div>
+  <div class="kart"><b>💰</b><h4>Uygun Fiyat</h4><p>Kliniklere özel fiyat</p></div>
+  <div class="kart"><b>🤝</b><h4>Teknik Destek</h4><p>Kurulum ve servis</p></div>
+</div>
+
+<div class="bolum acik">
+  <div class="kap">
+    <h2>Ürün Gruplarımız</h2>
+    <p class="alt">Muayenehaneden polikliniğe, diş hekimliğinin tüm ihtiyaçları</p>
+    <div class="urunler">
+      <div class="urun"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=75" alt="Dental ünit"><h3>Dental Ünit & Cihazlar</h3><p>Ünit, kompresör, otoklav, röntgen ve klinik cihazları.</p></div>
+      <div class="urun"><img src="https://images.unsplash.com/photo-1642844744022-d76a9af3711a?auto=format&fit=crop&w=700&q=75" alt="El aletleri"><h3>El Aletleri & Frezler</h3><p>Aeratör, anguldurva, piyasemen, frez ve cerrahi aletler.</p></div>
+      <div class="urun"><img src="https://images.unsplash.com/photo-1643660527090-bea721ad71f8?auto=format&fit=crop&w=700&q=75" alt="Restoratif malzemeler"><h3>Restoratif Malzemeler</h3><p>Kompozit, bonding, siman, dolgu ve ölçü malzemeleri.</p></div>
+      <div class="urun"><img src="https://images.unsplash.com/photo-1643660527217-b5e025ac642e?auto=format&fit=crop&w=700&q=75" alt="Endodonti"><h3>Endodonti & İmplant</h3><p>Kanal eğeleri, apeks locator, endomotor, implant parçaları.</p></div>
+      <div class="urun"><img src="https://images.unsplash.com/photo-1628235176517-71013205a2de?auto=format&fit=crop&w=700&q=75" alt="Sarf malzemeleri"><h3>Sarf & Hijyen</h3><p>Eldiven, maske, önlük, dezenfektan, sterilizasyon poşeti.</p></div>
+      <div class="urun"><img src="https://images.unsplash.com/photo-1704455306925-1401c3012117?auto=format&fit=crop&w=700&q=75" alt="Klinik kurulum"><h3>Klinik Kurulum</h3><p>Yeni açılan klinikler için anahtar teslim ekipman.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="bolum">
+  <div class="kap iki">
+    <img class="foto" src="https://images.unsplash.com/photo-1704455306251-b4634215d98f?auto=format&fit=crop&w=900&q=75" alt="Modern diş kliniği">
+    <div>
+      <h2 class="sol">Diş hekimlerinin güvenilir çözüm ortağı</h2>
+      <p>Sinerji Diş Deposu olarak Antalya ve çevresindeki diş hekimlerine, kliniklere ve laboratuvarlara kaliteli dental ekipman ve malzemeleri uygun fiyatlarla sunuyoruz.</p>
+      <ul>
+        <li>✓ Geniş stoklu ürün yelpazesi</li>
+        <li>✓ Kliniklere özel indirim seçenekleri</li>
+        <li>✓ Hızlı ve güvenli teslimat</li>
+        <li>✓ Cihazlarda kurulum ve teknik destek</li>
+      </ul>
+      <a class="btn ana" href="https://wa.me/905369467686" target="_blank">Teklif İsteyin →</a>
+    </div>
+  </div>
+</div>
+
+<div class="bolum cta">
+  <div class="kap">
+    <h2>Kliniğiniz için özel fiyat teklifi alın!</h2>
+    <p>İhtiyaç listenizi WhatsApp'tan gönderin, en uygun teklifi hemen iletelim.</p>
+    <a class="btn wp" href="https://wa.me/905369467686?text=Merhaba%2C%20fiyat%20teklifi%20almak%20istiyorum." target="_blank">💬 WhatsApp'tan Yazın</a>
+  </div>
+</div>
+
+<div class="bolum">
+  <div class="kap">
+    <h2>İletişim</h2>
+    <div class="iletisim">
+      <div class="kart"><b>📞</b><h4>Telefon</h4><a href="tel:+905369467686" target="_blank">0 536 946 76 86</a></div>
+      <div class="kart"><b>💬</b><h4>WhatsApp</h4><a href="https://wa.me/905369467686" target="_blank">Mesaj gönderin</a></div>
+      <div class="kart"><b>✉️</b><h4>E-posta</h4><a href="mailto:sinerjidisdeposu@gmail.com" target="_blank">sinerjidisdeposu@gmail.com</a></div>
+      <div class="kart"><b>📍</b><h4>Adres</h4><p>Antalya</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="alt-bilgi">© 2026 <b>Sinerji Diş Deposu</b> · Antalya Dental Ekipman ve Diş Hekimliği Malzemeleri</div>
+
+</div>
+
+<style>
+body{margin:0}
+.sj{font-family:Arial,Helvetica,sans-serif;color:#23324a;line-height:1.6;background:#fff}
+.sj *{box-sizing:border-box}
+.sj a{text-decoration:none}
+.sj img{display:block;max-width:100%}
+.sj .kap{max-width:1150px;margin:0 auto;padding:0 20px}
+.sj .ust{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sj .ust-ic{display:flex;justify-content:space-between;align-items:center;height:68px}
+.sj .logo{font-size:21px;font-weight:800;color:#0b2545}
+.sj .logo span{color:#1368aa}
+.sj .btn{display:inline-block;padding:13px 26px;border-radius:40px;font-weight:700;font-size:15px;margin:6px 8px 6px 0}
+.sj .wp{background:#25d366;color:#fff}
+.sj .ana{background:#1368aa;color:#fff}
+.sj .cizgi{border:2px solid #fff;color:#fff}
+.sj .hero{color:#fff;padding:110px 0 130px;background:linear-gradient(100deg,rgba(11,37,69,.93),rgba(11,37,69,.7) 55%,rgba(19,104,170,.3)),url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=75') center/cover}
+.sj .hero .kap>*{max-width:640px}
+.sj .rozet{display:inline-block;border:1px solid #13c4c4;color:#9ff5f5;padding:5px 15px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:18px}
+.sj .hero h1{font-size:46px;line-height:1.15;margin:0 0 18px}
+.sj .hero em{font-style:normal;color:#13c4c4}
+.sj .hero p{font-size:18px;opacity:.9;margin:0 0 28px}
+.sj .avantaj{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-55px;position:relative}
+.sj .kart{background:#fff;border-radius:16px;padding:22px;text-align:center;box-shadow:0 10px 30px rgba(11,37,69,.12)}
+.sj .kart b{font-size:30px}
+.sj .kart h4{margin:6px 0 2px;color:#0b2545}
+.sj .kart p,.sj .kart a{margin:0;font-size:14px;color:#6b7a90}
+.sj .bolum{padding:70px 0}
+.sj .acik{background:#eef6fb;margin-top:60px}
+.sj h2{text-align:center;font-size:34px;color:#0b2545;margin:0 0 8px}
+.sj h2.sol{text-align:left}
+.sj .alt{text-align:center;color:#6b7a90;margin:0 0 36px}
+.sj .urunler{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sj .urun{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(11,37,69,.08)}
+.sj .urun img{width:100%;height:200px;object-fit:cover}
+.sj .urun h3{margin:18px 20px 6px;color:#0b2545;font-size:19px}
+.sj .urun p{margin:0 20px 22px;color:#6b7a90;font-size:14px}
+.sj .iki{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.sj .foto{width:100%;height:400px;object-fit:cover;border-radius:22px}
+.sj .iki p{color:#6b7a90}
+.sj ul{list-style:none;padding:0;margin:0 0 24px}
+.sj li{padding:5px 0;font-weight:600}
+.sj .cta{text-align:center;color:#fff;background:linear-gradient(rgba(11,37,69,.88),rgba(11,37,69,.88)),url('https://images.unsplash.com/photo-1642844744022-d76a9af3711a?auto=format&fit=crop&w=1400&q=70') center/cover}
+.sj .cta h2{color:#fff}
+.sj .cta p{opacity:.9;margin:0 0 24px}
+.sj .iletisim{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.sj .alt-bilgi{background:#0b2545;color:#b9c6d8;text-align:center;padding:26px 20px;font-size:14px}
+.sj .alt-bilgi b{color:#fff}
+@media(max-width:850px){
+  .sj .hero h1{font-size:32px}
+  .sj .avantaj,.sj .iletisim{grid-template-columns:1fr 1fr}
+  .sj .urunler{grid-template-columns:1fr 1fr}
+  .sj .iki{grid-template-columns:1fr}
+  .sj h2{font-size:27px}
+}
+@media(max-width:520px){
+  .sj .urunler,.sj .iletisim{grid-template-columns:1fr}
+  .sj .hero h1{font-size:28px}
+  .sj .ust .btn{display:none}
+}
+</style>
